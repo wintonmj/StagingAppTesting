@@ -12,6 +12,9 @@ public class main {
 		
 		System.setProperty("webdriver.chrome.driver", "src/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://stagingapp.celohealth.com/");
+
 	}
 
 }
