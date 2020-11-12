@@ -1,0 +1,17 @@
+Does not test UI components for colouring 
+No testing for security such as SQL injection attacks
+
+Notes from testing: 
+- When going to the login page, the first input field (Email Address) is automatically focused on page load. This is the case with the Set Pin screen too. However, this does not happen in the Locked Page
+
+- There are four different elements used for error handling 
+    1. Red alert box above the form (Log In page, for all errors)
+    2. Small grey alret message in the form, above the disabled Next button (Set Pin Page, for mismatched pins)
+    3. Error Pop-Up (Set Pin Page, for pins with one charater repeated 4 times)
+    4. Pin Error (Set Pin Page, for weak pins like '1234')
+
+- Pins with any type of charater combination may be accepted in the Set Pin page. However, when unlocking the account, the pin will be counted as invalid unless thefirst character in the pin is a number.
+
+- 1234 and 4321 are considered weak pins but 2345 and 6789 are not.
+
+- Cannot press Enter while focused on the Pin (first pin) input to navigate to user home page from the Set Pin page. 
