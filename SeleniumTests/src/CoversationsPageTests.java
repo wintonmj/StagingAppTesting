@@ -17,7 +17,6 @@ public class CoversationsPageTests {
 	
 	//URLS
 	private String celoHomePageURL = "https://stagingapp.celohealth.com/";
-	private String conversationsPageURL = "https://stagingapp.celohealth.com/conversations";
 	
 	//User details
 	private String registeredUserEmail = "qa.candidate+01@celohealth.com";
@@ -29,17 +28,12 @@ public class CoversationsPageTests {
 	private String pinCodeID = "pin_code";
 	private String pinCodeConfirmID = "pin_code_confirm";
 	private String navMenuButtonID = "nav-menu";
-	private String lockButtonID = "celo-lock-button";
-	
-	//Element classnames
-	private String conversationsListClass = "mat-ripple convo-grid pt-1 pb-1 ng-tns-c130-5 ng-trigger ng-trigger-slideInOut ng-star-inserted selected";
+	private String sendMessageTextAreaID = "celo-send-message-textarea";
 	
 	//Element xpaths
 	private String nextButtonXPath = "//*[text()=' NEXT ']"; //spaces are needed on either side
-	private String incorrectPinPopUpXPath = "//*[text()='Incorrect PIN. Please re-enter.']"; 
-	private String forgotPinLinkXPath = "//*[text()='Forgot pin']"; 
-	private String switchAccountLinkXPath = "//*[text()='Sign in with a different account']"; 
-	private String logoTitleXPath = "//*[text()='Where healthcare comes together']"; 
+	private String sendMessageButtonXPath = "//*[text()='send']"; 
+
 
 	
 	private WebDriver getInitalisedDriver(){
@@ -66,7 +60,9 @@ public class CoversationsPageTests {
 		driver.findElement(By.id(pinCodeID)).sendKeys(pinCode);
         driver.findElement(By.id(pinCodeConfirmID)).sendKeys(pinCode);
         driver.findElement(By.xpath(nextButtonXPath)).click();
-		driver.manage().timeouts().implicitlyWait(waitTimeSeconds, TimeUnit.SECONDS);
+		
+		//wait for conversations to load
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(navMenuButtonID)));
 
 		return driver; 
 	}
@@ -75,15 +71,22 @@ public class CoversationsPageTests {
 	public void Conversations_Success_01_String() throws InterruptedException{
 		WebDriver driver = this.getInitalisedDriver();
 		
-		//wait for conversations to load
-        WebDriverWait wait = new WebDriverWait(driver, waitTimeSeconds); // seconds
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(navMenuButtonID)));
-        
-		WebElement conversationsList = driver.findElement(By.className(conversationsListClass));
-		conversationsList.click();
+		//WebElement conversationsList = driver.findElement(By.id(""));
+		//find first element of conversationsList
+		//click on first element in conversationsList
 		
-//        String currentURL= driver.getCurrentUrl();
-//		driver.close();
-//		assertEquals(conversationsPageURL, currentURL);
+		//Wait for conversation to load
+        //WebDriverWait wait = new WebDriverWait(driver, waitTimeSeconds); // seconds
+        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(sendMessageTextAreaID)));
+		
+		WebElement messageTextArea = driver.findElement(By.id(sendMessageTextAreaID));
+		WebElement sendMessageButton = driver.findElement(By.xpath(sendMessageButtonXPath));
+
+		messageTextArea.sendKeys("new message");
+		sendMessageButton.click();
+		
+		//assert new message is there
+		
+		driver.close();
 	}
 }
