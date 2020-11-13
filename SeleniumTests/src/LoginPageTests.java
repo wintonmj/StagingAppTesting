@@ -1,8 +1,6 @@
 import static org.junit.Assert.*;
 import java.util.concurrent.TimeUnit;
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.BeforeClass;
+
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -11,8 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.hamcrest.core.StringContains;
-
 
 public class LoginPageTests {
 	
@@ -20,7 +16,7 @@ public class LoginPageTests {
 	private int waitTimeSeconds = 3;
 	
 	//URLS
-	private String celoHomePageURL = "https://stagingapp.celohealth.com/";
+	private String celoHomePageURL = "https://stagingapp.celohealth.com";
 	private String setPinPageURL = "https://stagingapp.celohealth.com/pin?returnUrl=%2Fconversations";
 	
 	//User details
@@ -46,7 +42,7 @@ public class LoginPageTests {
 		WebDriver driver = new ChromeDriver() ;
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(waitTimeSeconds, TimeUnit.SECONDS);
-		driver.get("https://stagingapp.celohealth.com/");
+		driver.get(celoHomePageURL);
 		WebElement loginButton = driver.findElement(By.id("login"));
 		loginButton.click();
 		
