@@ -1,10 +1,15 @@
 # StagingAppTesting
 
-Pre-recs: 
+## Background
+All test cases can be found in QAChallengeTestCases.pdf
+Some test cases have been automated and are ran with the following instructions
+
+## Pre-recs: 
 - You have the JDK (Java Development Kit) - Available here: https://www.oracle.com/java/technologies/javase-downloads.html
 - You have the Selenium Client & Java WebDriver Language Bindings - Available here https://www.selenium.dev/downloads/
 - You have a Java IDE like Eclipse - Available here: https://www.eclipse.org/downloads/
 
+## Running the project
 In your commandline, in a local directory of your choosing, run ```git init```
 Followed by ``` git pull https://github.com/wintonmj/StagingAppTesting.git```
 
@@ -12,7 +17,7 @@ Open the SeleniumTests project in Eclipse or IntelliJ.
 
 Right click any of the Test.java files, and click on the option "Run as" then "JUnit" to run the tests for the applicable page
 
-***NOTE:***
+### Possible errors
 If you are getting import errors:
 open the 'selenium-java-3.141.59.zip' you would've downloaded from here https://www.selenium.dev/downloads/
 and add the following jars to your class path: 
