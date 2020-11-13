@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 import java.util.concurrent.TimeUnit;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -10,6 +11,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.hamcrest.core.StringContains;
+
 
 public class LoginPageTests {
 	
@@ -31,6 +34,11 @@ public class LoginPageTests {
 	
 	//Element xpaths ()
 	private String loginButtonXPath = "//*[text()='LOG IN']";
+	private String logoTitleXPath = "//*[text()='Where healthcare comes together']";
+	private String invalidInputWarningXPath = "//*[text()='Incorrect username and/or password. Please re-enter.']";
+	private String emptyEmailWarningXPath = "//*[text()='The Username field is required.']";
+	private String emptyPasswordWarningXPath = "//*[text()='The Password field is required.']";
+
 	
 	private WebDriver getInitalisedDriver(){
 		System.setProperty("webdriver.chrome.driver", "src/chromedriver.exe"); 
@@ -106,6 +114,22 @@ public class LoginPageTests {
         String currentURL= driver.getCurrentUrl();
 		assertEquals(setPinPageURL, currentURL);
 		
+		//Must close driver
+		driver.close();
+	}
+	
+	@Test
+	public void login_Failure_02_Invalid_Email() throws InterruptedException{
+		WebDriver driver = this.getInitalisedDriver();
+		WebElement emailInput = driver.findElement(By.id(emailInputID));
+        WebElement passwordInput = driver.findElement(By.id(passwordInputID));
+
+        emailInput.sendKeys("qa.candidate+01@SELOhealth.com");
+        passwordInput.sendKeys(registeredUserPassword); 
+        passwordInput.sendKeys(Keys.ENTER); 
+
+        assertTrue(driver.findElement(By.xpath(invalidInputWarningXPath)).isDisplayed());
+        
 		//Must close driver
 		driver.close();
 	}
