@@ -10,8 +10,11 @@ Followed by ``` git pull https://github.com/wintonmj/StagingAppTesting.git```
 
 Open the SeleniumTests project in Eclipse or IntelliJ. 
 
+Right click any of the Test.java files, and click on the option "Run as" then "JUnit" to run the tests for the applicable page
+
+***NOTE:***
 If you are getting import errors:
-*** open the 'selenium-java-3.141.59.zip' you would've downloaded from here https://www.selenium.dev/downloads/
+open the 'selenium-java-3.141.59.zip' you would've downloaded from here https://www.selenium.dev/downloads/
 and add the following jars to your class path: 
   - client-combined-3.141.59.jar
   - guava-25.0-jre.jar
@@ -28,6 +31,6 @@ You may also need to add JUnit4 to your class path (not modules) as well. Your I
 
 To add JUnit4 to your class path, right click the JRE System Libraries tab, under your project files, in your IDE. 
 Then click on 'Build Path', then 'Configure Build Path'.
-Next, click the 'Add Libraries' button and find Junit4 in the options. *** 
+Next, click the 'Add Libraries' button and find Junit4 in the options.  
 
 
