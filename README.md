@@ -1,4 +1,4 @@
-# StagingAppTesting
+# QA Challenge Manual Test and Automated Tests
 
 ## Background
 All test cases can be found in QAChallengeTestCases.pdf
