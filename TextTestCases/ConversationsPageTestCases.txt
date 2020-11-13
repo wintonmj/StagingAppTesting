@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------Positive Tests
 
-Test_Case_ID: TC_Conversations_Success_01_String
+Test_Case_ID: Conversations_Success_01_String
 
 Title: Conversation Page – Send Message Success: String
 
@@ -36,7 +36,7 @@ Expected Result: The 'app-message-list' should now have a new message with your 
 
 //--- 
 
-Test_Case_ID: TC_Conversations_Success_02_Attachment_JPG
+Test_Case_ID: Conversations_Success_02_Attachment_JPG
 
 Title: Conversation Page – Send Attachment Success: JPG
 
@@ -74,7 +74,7 @@ Expected Result: The 'app-message-list' should now have a new message with your 
 
 //--- 
 
-Test_Case_ID: TC_Conversations_Success_03_Attachment_PNG
+Test_Case_ID: Conversations_Success_03_Attachment_PNG
 
 Title: Conversation Page – Send Attachment Success: PNG
 
@@ -112,7 +112,7 @@ Expected Result: The 'app-message-list' should now have a new message with your 
 
 //--- 
 
-Test_Case_ID: TC_Conversations_Success_04_Attachment_PDF
+Test_Case_ID: Conversations_Success_04_Attachment_PDF
 
 Title: Conversation Page – Send Attachment Success: PDF
 
@@ -150,7 +150,7 @@ Expected Result: The 'app-message-list' should now have a new message with your 
 
 //--- 
 
-Test_Case_ID: TC_Conversations_Success_05_Upload_JPG
+Test_Case_ID: Conversations_Success_05_Upload_JPG
 
 Title: Conversation Page – Send Uploaded Photo Success: JPG
 
@@ -187,7 +187,7 @@ Expected Result: The 'app-message-list' should now have a new message with your 
 
 //--- 
 
-Test_Case_ID: TC_Conversations_Success_06_Attachment_PNG
+Test_Case_ID: Conversations_Success_06_Attachment_PNG
 
 Title: Conversation Page – Send Uploaded Photo Success: PNG
 
@@ -224,7 +224,7 @@ Expected Result: The 'app-message-list' should now have a new message with your 
 
 //--- 
 
-Test_Case_ID: TC_Conversations_Success_07_Secure_Library_Attactment
+Test_Case_ID: Conversations_Success_07_Secure_Library_Attactment
 
 Title: Conversation Page – Send Secure Library Attachment Success
 

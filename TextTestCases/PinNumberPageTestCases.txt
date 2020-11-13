@@ -41,7 +41,7 @@ MMMM mmmm Case Sensitivity Test
 
 //-----------------------------------------------------------------Positive Tests
 
-Test_Case_ID: TC_Set_Pin_Success_01_Next_Button
+Test_Case_ID: Set_Pin_Success_01_Next_Button
 
 Title: Set Pin Page – Set Pin Successfully: Submit Button
 
@@ -73,7 +73,7 @@ Expected Result: Redirected to 'Conversations' Page. URL: https://stagingapp.cel
 
 //--- 
 
-Test_Case_ID: TC_Set_Pin_Success_02_Pin_Focused_Enter
+Test_Case_ID: Set_Pin_Success_02_Pin_Focused_Enter
 
 Title: Set Pin Page – Set Pin Successfully: Pin Code Focused Enter
 
@@ -105,7 +105,7 @@ Expected Result: Redirected to 'Conversations' Page. URL: https://stagingapp.cel
 
 //--- 
 
-Test_Case_ID: TC_Set_Pin_Success_03_Confirm_Focused_Enter
+Test_Case_ID: Set_Pin_Success_03_Confirm_Focused_Enter
 
 Title: Set Pin Page – Set Pin Successfully: Confirm Focused Enter
 
@@ -137,7 +137,7 @@ Expected Result: Redirected to 'Conversations' Page. URL: https://stagingapp.cel
 
 //--- 
 
-Test_Case_ID: TC_Set_Pin_Success_04_Numbers
+Test_Case_ID: Set_Pin_Success_04_Numbers
 
 Title: Set Pin Page – Set Pin Successfully: Pin Code Using Numbers
 
@@ -169,7 +169,7 @@ Expected Result: Redirected to 'Conversations' Page. URL: https://stagingapp.cel
 
 //--- 
 
-Test_Case_ID: TC_Set_Pin_Success_05_Letters
+Test_Case_ID: Set_Pin_Success_05_Letters
 
 Title: Set Pin Page – Set Pin Successfully: Pin Code Using Letters
 
@@ -201,7 +201,7 @@ Expected Result: Redirected to 'Conversations' Page. URL: https://stagingapp.cel
 
 //--- 
 
-Test_Case_ID: TC_Set_Pin_Success_06_Special_Characters
+Test_Case_ID: Set_Pin_Success_06_Special_Characters
 
 Title: Set Pin Page – Set Pin Successfully: Pin Code Using Special Characters
 
@@ -233,7 +233,7 @@ Expected Result: Redirected to 'Conversations' Page. URL: https://stagingapp.cel
 
 //--- 
 
-Test_Case_ID: TC_Set_Pin_Success_07_Combination_Characters
+Test_Case_ID: Set_Pin_Success_07_Combination_Characters
 
 Title: Set Pin Page – Set Pin Successfully: Pin Code Using A Combination Of Character Types
 
@@ -265,7 +265,7 @@ Expected Result: Redirected to 'Conversations' Page. URL: https://stagingapp.cel
 
 //---
 
-Test_Case_ID: TC_Set_Pin_Success_08_Oversized_Pin
+Test_Case_ID: Set_Pin_Success_08_Oversized_Pin
 Title: Set Pin Page – Set Pin Failure: Incomplete Pin
 
 Description: A registered user should fail to input a pin that has more than 4 characters but still successfully set the first four charaters of what was typed. 
@@ -296,7 +296,7 @@ Expected Result: Pin Code fields only retain the first four characters. Redirect
 
 //-----------------------------------------------------------------Negative Tests
 
-Test_Case_ID: TC_Set_Pin_Failure_01_Repetitive_Number
+Test_Case_ID: Set_Pin_Failure_01_Repetitive_Number
 
 Title: Set Pin Page – Set Pin Failure: Pin Code Repeating A Single Number Character
 
@@ -328,7 +328,7 @@ Expected Result: Error pop-up returns with an alert stating 'Error. Repetitive P
 
 //---
 
-Test_Case_ID: TC_Set_Pin_Failure_02_Repetitive_Letter
+Test_Case_ID: Set_Pin_Failure_02_Repetitive_Letter
 
 Title: Set Pin Page – Set Pin Failure: Pin Code Repeating A Single Letter Character
 
@@ -360,7 +360,7 @@ Expected Result: Error pop-up returns with an alert stating 'Error. Repetitive P
 
 //---
 
-Test_Case_ID: TC_Set_Pin_Failure_03_Repetitive_Special_Character
+Test_Case_ID: Set_Pin_Failure_03_Repetitive_Special_Character
 
 Title: Set Pin Page – Set Pin Failure: Pin Code Repeating A Single Special Character
 
@@ -392,7 +392,7 @@ Expected Result: Error pop-up returns with an alert stating 'Error. Repetitive P
 
 //---
 
-Test_Case_ID: TC_Set_Pin_Failure_04_Weak_Pin_Asending
+Test_Case_ID: Set_Pin_Failure_04_Weak_Pin_Asending
 Title: Set Pin Page – Set Pin Failure: Pin Code Weak Pin
 
 Description: A registered user should fail to set a pin that uses 1234 in consecutive asending order
@@ -423,7 +423,7 @@ Expected Result: Error pop-up returns with an alert stating 'PIN Error. Celo Sec
 
 //---
 
-Test_Case_ID: TC_Set_Pin_Failure_05_Weak_Pin_Decending
+Test_Case_ID: Set_Pin_Failure_05_Weak_Pin_Decending
 Title: Set Pin Page – Set Pin Failure: Pin Code Weak Pin
 
 Description: A registered user should fail to set a pin that uses 1234 in consecutive decending order
@@ -454,7 +454,7 @@ Expected Result: Error pop-up returns with an alert stating 'PIN Error. Celo Sec
 
 //---
 
-Test_Case_ID: TC_Set_Pin_Failure_06_Mismatched_Pin_Codes
+Test_Case_ID: Set_Pin_Failure_06_Mismatched_Pin_Codes
 Title: Set Pin Page – Set Pin Failure: Mismatched Pin Codes
 
 Description: A registered user should fail to set a pin that uses capital letters in the Pin Code input and the same letters lowercase in the Confirm input
@@ -485,7 +485,7 @@ Expected Result: Set Pin page returns with an alert stating 'PINs do not match. 
 
 //---
 
-Test_Case_ID: TC_Set_Pin_Failure_07_Mismatched_Cases
+Test_Case_ID: Set_Pin_Failure_07_Mismatched_Cases
 Title: Set Pin Page – Set Pin Failure: Mismatched Pin Code Casing
 
 Description: A registered user should fail to set a pin that uses capital letters in the Pin Code input and the same letters lowercase in the Confirm input
@@ -516,7 +516,7 @@ Expected Result: Set Pin page returns with an alert stating 'PINs do not match. 
 
 //---
 
-Test_Case_ID: TC_Set_Pin_Failure_08_Undersized_Pin
+Test_Case_ID: Set_Pin_Failure_08_Undersized_Pin
 Title: Set Pin Page – Set Pin Failure: Undersized Pin
 
 Description: A registered user should fail to set a pin that has less than 4 characters 

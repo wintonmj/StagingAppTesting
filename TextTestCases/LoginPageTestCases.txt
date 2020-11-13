@@ -12,7 +12,7 @@ Password: 3tQp+,/Q
 
 //-----------------------------------------------------------------Positive Tests
 
-Test_Case_ID: TC_Login_Success_01_Log_In_Button
+Test_Case_ID: Login_Success_01_Log_In_Button
 
 Title: Login Page – Log In Successfully: Log In Button
 
@@ -39,7 +39,7 @@ Expected Result: Redirected to 'Set Up Pin Number' Page. URL: https://stagingapp
 
 //---
 
-Test_Case_ID: TC_Login_Success_02_Email_Focused_Enter
+Test_Case_ID: Login_Success_02_Email_Focused_Enter
 
 Title: Login Page – Log In Successfully: Email Focused Enter
 
@@ -67,7 +67,7 @@ Expected Result: Redirected to 'Set Up Pin Number' Page. URL: https://stagingapp
 
 //---
 
-Test_Case_ID: TC_Login_Success_03_Password_Focused_Enter
+Test_Case_ID: Login_Success_03_Password_Focused_Enter
 
 Title: Login Page – Log In Successfully: Password Focused Enter
 
@@ -95,7 +95,7 @@ Expected Result: Redirected to 'Set Up Pin Number' Page. URL: https://stagingapp
 
 //-----------------------------------------------------------------Negative Tests
 
-Test_Case_ID: TC_Login_Failure_01_Unfocused_Enter
+Test_Case_ID: Login_Failure_01_Unfocused_Enter
 
 Title: Login Page – Log In Unfocused Enter
 
@@ -122,7 +122,7 @@ Expected Result: Remain on login page, no state change
 
 //---
 
-Test_Case_ID: TC_Login_Failure_02_Invalid_Email
+Test_Case_ID: Login_Failure_02_Invalid_Email
 
 Title: Login Page – Log In Failure: Invalid Email
 
@@ -149,7 +149,7 @@ Expected Result: Log In page returns with an alert stating 'Incorrect username a
 
 //---
 
-Test_Case_ID: TC_Login_Failure_03_Invalid_Password
+Test_Case_ID: Login_Failure_03_Invalid_Password
 
 Title: Login Page – Log In Failure: Invalid Password
 
@@ -176,7 +176,7 @@ Expected Result: Log In page returns with an alert stating 'Incorrect username a
 
 //---
 
-Test_Case_ID: TC_Login_Failure_04_Empty_Email
+Test_Case_ID: Login_Failure_04_Empty_Email
 
 Title: Login Page – Log In Failure: Empty Email
 
@@ -201,7 +201,7 @@ Expected Result: Log In page returns with an alert stating 'The Username field i
 
 //---
 
-Test_Case_ID: TC_Login_Failure_05_Empty_Password
+Test_Case_ID: Login_Failure_05_Empty_Password
 
 Title: Login Page – Log In Failure: Empty Password
 
@@ -226,7 +226,7 @@ Expected Result: Log In page returns with an alert stating 'The Password field i
 
 //---
 
-Test_Case_ID: TC_Login_Failure_06_Empty_Email_And_Password
+Test_Case_ID: Login_Failure_06_Empty_Email_And_Password
 
 Title: Login Page – Log In Failure: Empty Email And Password
 
@@ -249,7 +249,7 @@ Expected Result: Log In page returns with an alert stating 'The Username field i
 
 //---
 
-Test_Case_ID: TC_Login_Failure_07_Exceed_Password_Failure_Attempts
+Test_Case_ID: Login_Failure_07_Exceed_Password_Failure_Attempts
 
 Title: Login Page – Log In Failure: Exceed Password Failure Attempts
 

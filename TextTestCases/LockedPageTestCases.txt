@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------Positive Tests
 
-Test_Case_ID: TC_Unlock_Success_01_Number
+Test_Case_ID: Unlock_Success_01_Number
 
 Title: Lock Page – Unlock Successfully: Number Pin Code
 
@@ -35,7 +35,7 @@ Expected Result: Redirected to 'Conversations' Page. URL: https://stagingapp.cel
 
 //--- 
 
-Test_Case_ID: TC_Unlock_Success_02_Letter
+Test_Case_ID: Unlock_Success_02_Letter
 
 Title: Lock Page – Unlock Successfully: Letter Pin Code
 
@@ -70,7 +70,7 @@ Expected Result: Redirected to 'Conversations' Page. URL: https://stagingapp.cel
 
 //--- 
 
-Test_Case_ID: TC_Unlock_Success_03_Special_Character
+Test_Case_ID: Unlock_Success_03_Special_Character
 
 Title: Lock Page – Unlock Successfully: Special Character Pin Code
 
@@ -105,7 +105,7 @@ Expected Result: Redirected to 'Conversations' Page. URL: https://stagingapp.cel
 
 //--- 
 
-Test_Case_ID: TC_Unlock_Success_04_Combination_Characters
+Test_Case_ID: Unlock_Success_04_Combination_Characters
 
 Title: Lock Page – Unlock Successfully: Combination Characters Pin Code
 
@@ -140,7 +140,7 @@ Expected Result: Redirected to 'Conversations' Page. URL: https://stagingapp.cel
 
 //--- 
 
-Test_Case_ID: TC_Unlock_Success_05_Forgot_Pin
+Test_Case_ID: Unlock_Success_05_Forgot_Pin
 
 Title: Lock Page – Unlock Successfully: Forgot Pin
 
@@ -175,7 +175,7 @@ Expected Result: Redirected to 'Root' Page. URL: https://stagingapp.celohealth.c
 
 //--- 
 
-Test_Case_ID: TC_Unlock_Success_06_Switch_Account
+Test_Case_ID: Unlock_Success_06_Switch_Account
 
 Title: Lock Page – Unlock Successfully: Switch Account
 
@@ -210,7 +210,7 @@ Expected Result: Redirected to 'Root' Page. URL: https://stagingapp.celohealth.c
 
 //-----------------------------------------------------------------Negative Tests
 
-Test_Case_ID: TC_Unlock_Failure_01_Invalid_Pin_Code
+Test_Case_ID: Unlock_Failure_01_Invalid_Pin_Code
 
 Title: Lock Page – Unlock Failure: Invalid Pin Code
 
@@ -246,7 +246,7 @@ Expected Result: Error pop-up returns with an alert stating 'Incorrect PIN. Plea
 
 //---
 
-Test_Case_ID: TC_Unlock_Failure_02_Expired_Pin_Code
+Test_Case_ID: Unlock_Failure_02_Expired_Pin_Code
 
 Title: Lock Page – Unlock Successfully: Expired Pin Code From Forgotten Pin
 
@@ -293,7 +293,7 @@ Expected Result: Error pop-up returns with an alert stating 'Incorrect PIN. Plea
 
 //---
 
-Test_Case_ID: TC_Unlock_Failure_03_Expired_Pin_Code
+Test_Case_ID: Unlock_Failure_03_Expired_Pin_Code
 
 Title: Lock Page – Unlock Successfully: Expired Pin Code From Signing Out
 
@@ -340,7 +340,7 @@ Expected Result: Error pop-up returns with an alert stating 'Incorrect PIN. Plea
 
 //--- 
 
-Test_Case_ID: TC_Unlock_Failure_04_Empty_Pin_Code
+Test_Case_ID: Unlock_Failure_04_Empty_Pin_Code
 
 Title: Lock Page – Unlock Failure: Invalid Pin Code
 
