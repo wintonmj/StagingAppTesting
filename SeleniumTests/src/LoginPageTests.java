@@ -38,6 +38,7 @@ public class LoginPageTests {
 	private String invalidInputWarningXPath = "//*[text()='Incorrect username and/or password. Please re-enter.']";
 	private String emptyEmailWarningXPath = "//*[text()='The Username field is required.']";
 	private String emptyPasswordWarningXPath = "//*[text()='The Password field is required.']";
+	private String expiredPasswordWarningXPath = "//*[text()='Your account is locked. Please reset your password.']";
 
 	
 	private WebDriver getInitalisedDriver(){
@@ -82,7 +83,7 @@ public class LoginPageTests {
         
         emailInput.sendKeys(registeredUserEmail);
         passwordInput.sendKeys(registeredUserPassword); 
-        passwordInput.sendKeys(Keys.ENTER); 
+        emailInput.sendKeys(Keys.ENTER); 
 
                 
         //Allow for redirects and loading before getting the URL
@@ -129,6 +130,89 @@ public class LoginPageTests {
         passwordInput.sendKeys(Keys.ENTER); 
 
         assertTrue(driver.findElement(By.xpath(invalidInputWarningXPath)).isDisplayed());
+        
+		//Must close driver
+		driver.close();
+	}
+	
+	@Test
+	public void login_Failure_03_Invalid_Password() throws InterruptedException{
+		WebDriver driver = this.getInitalisedDriver();
+		WebElement emailInput = driver.findElement(By.id(emailInputID));
+        WebElement passwordInput = driver.findElement(By.id(passwordInputID));
+
+        emailInput.sendKeys(registeredUserEmail);
+        passwordInput.sendKeys("invalidPassword"); 
+        passwordInput.sendKeys(Keys.ENTER); 
+
+        assertTrue(driver.findElement(By.xpath(invalidInputWarningXPath)).isDisplayed());
+        
+		//Must close driver
+		driver.close();
+	}
+	
+	@Test
+	public void login_Failure_04_Empty_Email() throws InterruptedException{
+		WebDriver driver = this.getInitalisedDriver();
+		WebElement emailInput = driver.findElement(By.id(emailInputID));
+        WebElement passwordInput = driver.findElement(By.id(passwordInputID));
+
+        emailInput.sendKeys(registeredUserEmail);
+        passwordInput.sendKeys(Keys.ENTER); 
+
+        assertTrue(driver.findElement(By.xpath(emptyPasswordWarningXPath)).isDisplayed());
+        
+		//Must close driver
+		driver.close();
+	}
+	
+	@Test
+	public void login_Failure_05_Empty_Password() throws InterruptedException{
+		WebDriver driver = this.getInitalisedDriver();
+		WebElement emailInput = driver.findElement(By.id(emailInputID));
+        WebElement passwordInput = driver.findElement(By.id(passwordInputID));
+
+        passwordInput.sendKeys(registeredUserPassword);
+        passwordInput.sendKeys(Keys.ENTER); 
+
+        assertTrue(driver.findElement(By.xpath(emptyEmailWarningXPath)).isDisplayed());
+        
+		//Must close driver
+		driver.close();
+	}
+	
+	@Test
+	public void login_Failure_06_Empty_Email_And_Password() throws InterruptedException{
+		WebDriver driver = this.getInitalisedDriver();
+		WebElement emailInput = driver.findElement(By.id(emailInputID));
+        WebElement passwordInput = driver.findElement(By.id(passwordInputID));
+
+        passwordInput.sendKeys(Keys.ENTER); 
+
+        assertTrue(driver.findElement(By.xpath(emptyPasswordWarningXPath)).isDisplayed());
+        assertTrue(driver.findElement(By.xpath(emptyEmailWarningXPath)).isDisplayed());
+        
+		//Must close driver
+		driver.close();
+	}
+	
+	@Test
+	public void login_Failure_07_Exceed_Password_Failure_Attempts() throws InterruptedException{
+		WebDriver driver = this.getInitalisedDriver();
+		WebElement emailInput = driver.findElement(By.id(emailInputID));
+        WebElement passwordInput = driver.findElement(By.id(passwordInputID));
+        emailInput.sendKeys(registeredUserEmail);
+        
+        for(int i=0; i<10;i++) {
+            passwordInput.sendKeys("invalidPassword"); 
+            passwordInput.sendKeys(Keys.ENTER); 
+            
+        	//after submitting the form, the element must be reset to interact with it again
+        	passwordInput = driver.findElement(By.id(passwordInputID));
+
+        }
+        
+        assertTrue(driver.findElement(By.xpath(expiredPasswordWarningXPath)).isDisplayed());
         
 		//Must close driver
 		driver.close();
