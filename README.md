@@ -7,15 +7,14 @@ Some test cases have been automated and are ran with the following instructions
 ## Pre-recs: 
 - You have the JDK (Java Development Kit) - Available here: https://www.oracle.com/java/technologies/javase-downloads.html
 - You have the Selenium Client & Java WebDriver Language Bindings - Available here https://www.selenium.dev/downloads/
-- You have a Java IDE like Eclipse - Available here: https://www.eclipse.org/downloads/
+- You have a Java IDE like Eclipse installed - Available here: https://www.eclipse.org/downloads/
 
 ## Running the project
-In your commandline, in a local directory of your choosing, run ```git init```
-Followed by ``` git pull https://github.com/wintonmj/StagingAppTesting.git```
-
-Open the SeleniumTests project in Eclipse or IntelliJ. 
-
-Right click any of the Test.java files, and click on the option "Run as" then "JUnit" to run the tests for the applicable page
+1. In your commandline, in a local directory of your choosing, run the command ```git init```
+2. Run the command ``` git pull https://github.com/wintonmj/StagingAppTesting.git``` in the same directory
+3. Open the SeleniumTests project in Eclipse or IntelliJ. 
+4. Right click any of the Test.java files
+5. Click on the option "Run as" then "JUnit" to run the tests for the applicable page you would like tested
 
 ### Possible errors
 If you are getting import errors:
