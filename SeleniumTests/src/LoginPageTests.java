@@ -30,7 +30,6 @@ public class LoginPageTests {
 	
 	//Element xpaths ()
 	private String loginButtonXPath = "//*[text()='LOG IN']";
-	private String logoTitleXPath = "//*[text()='Where healthcare comes together']";
 	private String invalidInputWarningXPath = "//*[text()='Incorrect username and/or password. Please re-enter.']";
 	private String emptyEmailWarningXPath = "//*[text()='The Username field is required.']";
 	private String emptyPasswordWarningXPath = "//*[text()='The Password field is required.']";
